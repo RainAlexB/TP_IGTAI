@@ -440,8 +440,8 @@ int main(int argc, char *argv[]) {
 
     if(argc<2 || argc >3) {
         printf("usage : %s filename i\n", argv[0]);
-        printf("        filename : where to save the result, whithout extention\n");
-        printf("        i : scenen number, optional\n");
+        printf("        filename : where to save the result, without file extention\n");
+        printf("        i : scene number, optional\n");
         exit(0);
     }
 
