@@ -29,6 +29,11 @@ make unit-test
 ./unit-test
 ```
 
+To compile the generator
+```
+make mrt
+```
+
 To generate an image
 ```
 ./mrt file_name_without_extenstion [scene_number]
