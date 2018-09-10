@@ -397,8 +397,8 @@ Scene * initScene6() {
     mat.IOR = 1.9382;
     mat.roughness = 0.0886;
     
-    addObject(scene, initPyramid(0.75, 1, point3(0, 0, 0), mat));
-    addObject(scene, initPyramid(1, 0.125, point3(-0.5, 0, -1.25), mat_lib[4]));
+    addObject(scene, initPyramid(0.75, 1, point3(0, 0, 0), mat, vec3(45, 0, 45)));
+    addObject(scene, initPyramid(1, 0.125, point3(-0.5, 0, -1.25), mat_lib[4], vec3(0)));
     
     return scene;
 }

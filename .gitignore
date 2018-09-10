@@ -1,2 +1,13 @@
 TP_IGTAI_BEGG.zip
 imgs/
+.d/
+image.o
+kdtree.o
+lodepng-master/lodepng.o
+main.o
+raytracer.o
+scene.o
+mrt
+IGTAI-RayTracer/lodepng-master/lodepng.o
+unit-test
+unit-test.o

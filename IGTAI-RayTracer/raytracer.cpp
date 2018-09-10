@@ -8,9 +8,9 @@
 #define PI 3.141592653f
 #define MAX_DEPTH 10
 
-/// acne_eps is a small constant used to prevent acne when computing
-/// intersection
-//  or boucing (add this amount to the position before casting a new ray !
+/* acne_eps is a small constant used to prevent acne when computing
+intersection
+or bouncing (add this amount to the position before casting a new ray ! */
 const float acne_eps = 1e-4;
 
 bool intersectPlane(Ray *ray, Intersection *intersection, Object *obj) {
