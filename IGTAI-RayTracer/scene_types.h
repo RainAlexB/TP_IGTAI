@@ -45,7 +45,6 @@ typedef struct geometry_s {
             vec3 a;
             vec3 b;
             vec3 c;
-            vec3 rotation;
         } triangle;
         struct {
             // pyramid
@@ -53,7 +52,6 @@ typedef struct geometry_s {
             float length; //length of base
             vec3 center;
             Object * tri[6]; // 4 faces + 2 triangles pour la base
-            vec3 rotation;
         } pyramid;
         struct {
             // mesh

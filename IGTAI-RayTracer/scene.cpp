@@ -68,7 +68,7 @@ Object *initTriangle(point3 a, point3 b, point3 c, Material mat, vec3 rotation) 
 	ret->geom.triangle.a = a;
 	ret->geom.triangle.b = b;
 	ret->geom.triangle.c = c;
-	ret->geom.triangle.rotation = rotation;
+	
 	memcpy(&(ret->mat), &mat, sizeof(Material));
 	return ret;
 }
