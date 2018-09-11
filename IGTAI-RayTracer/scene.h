@@ -22,7 +22,7 @@ Object* initTriangle(point3 a, point3 b, point3 c, Material mat, vec3 rotation);
 Object* initSphere(point3 center, float radius, Material mat);
 Object* initPlane(vec3 normal, float d, Material mat);
 Object* initPyramid(float height, float length, point3 center, Material mat, vec3 rotation);
-Object* initMesh(const char * fileName, Material mat);
+Object* initMesh(const char * fileName, Material mat, vec3 rotation);
 
 
 //! release memory for the object obj

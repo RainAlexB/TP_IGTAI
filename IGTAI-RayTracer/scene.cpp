@@ -98,7 +98,7 @@ Object *initPyramid(float height, float length, point3 center, Material mat, vec
 	return ret;
 }
 
-Object *initMesh(const char * fileName, Material mat){
+Object *initMesh(const char * fileName, Material mat, vec3 rotation){
 	Object *ret;
 	ret = (Object *)malloc(sizeof(Object));
 	ret->geom.type = MESH;
@@ -123,7 +123,7 @@ Object *initMesh(const char * fileName, Material mat){
 				sscanf(&line[2], "%d/%*d %d/%*d %d/%*d", &i, &j, &k);                
 				ret->geom.mesh.tri[ret->geom.mesh.nbTriangles] = initTriangle(ret->geom.mesh.pt[i-1], 
 																			ret->geom.mesh.pt[j-1], 
-																			ret->geom.mesh.pt[k-1], mat, vec3(0));
+																			ret->geom.mesh.pt[k-1], mat, rotation);
 				ret->geom.mesh.nbTriangles++;
 			}
 		}

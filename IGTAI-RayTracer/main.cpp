@@ -428,7 +428,7 @@ Scene * initScene7() {
     addLight(scene, initLight(point3(3, 2, 3),   .5f*color3(4, 4, 4)));
     addLight(scene, initLight(point3(4,3,-1),    .5f*color3(5, 5, 5)));
 
-    addObject(scene, initMesh(MESHFILE, mat_lib[4]));
+    addObject(scene, initMesh(MESHFILE, mat_lib[4], vec3(0, 90, 45)));
 
     return scene;
 }
