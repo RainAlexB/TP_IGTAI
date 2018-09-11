@@ -8,29 +8,30 @@
 /* ROTATION MATRICES */
 // x matrix
 mat3 rx(float angle){
-	mat3 matRx =  mat3(1, 	0,           0,
-						0, cos(angle), -(sin(angle)),
-						0, sin(angle), cos(angle));
+	mat3 matRx = mat3(1, 	0, 	0,
+					0, cos(angle), -(sin(angle)),
+					0, sin(angle), cos(angle));
 	return matRx;
 }
 
 // y matrix
 mat3 ry(float angle){
- 	mat3 matRy =  mat3(cos(angle),   0, 	sin(angle),
-					 0,				1,	 0,
-					 -(sin(angle)), 0, 	cos(angle));
+ 	mat3 matRy =  mat3(cos(angle), 	0, 	sin(angle),
+						0, 	1, 	0,
+					-(sin(angle)), 	0, 	cos(angle));
  	return matRy;
 }
 
 // z matrix
 mat3 rz(float angle){
 	mat3 matRz =  mat3(cos(angle), 	-(sin(angle)), 	0,
-					 sin(angle), 	cos(angle),     0,
-					 0,                  0,         1);
+						sin(angle), 	cos(angle), 	0,
+					 	0, 	0, 	1);
 	return matRz;
 }
 
-// multiplies the x y z matrices with angle
+/* OVERALL rotation */
+// multiplies the x y z matrices with angle for
 mat3 totalRot(vec3 angles){
 	return rx(angles.x) * ry(angles.y) * rz(angles.z);
 }
@@ -68,7 +69,7 @@ Object *initTriangle(point3 a, point3 b, point3 c, Material mat, vec3 rotation) 
 	ret->geom.triangle.a = a;
 	ret->geom.triangle.b = b;
 	ret->geom.triangle.c = c;
-	
+
 	memcpy(&(ret->mat), &mat, sizeof(Material));
 	return ret;
 }
